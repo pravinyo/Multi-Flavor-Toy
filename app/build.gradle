@@ -33,7 +33,6 @@ android {
 
     productFlavors {
         demo {
-            applicationId 'com.allsoftdroid.mobile.multiflavortoy.demo'
             applicationIdSuffix ".demo"
             versionCode 1
             versionName '1.0.0'
@@ -41,11 +40,23 @@ android {
         }
 
         full {
-            applicationId 'com.allsoftdroid.mobile.multiflavortoy.full'
             applicationIdSuffix ".full"
             versionCode 1
             versionName '1.0.0'
             dimension "mode"
+        }
+    }
+    sourceSets {
+        demo {
+            res {
+                srcDirs 'src/demo/res', 'src/demo/res/'
+            }
+        }
+
+        full {
+            res {
+                srcDirs 'src/full/res', 'src/full/res/'
+            }
         }
     }
 }
